@@ -1,0 +1,84 @@
+
+html, body, #wrapper, main {
+  height:100%;
+  width:100%;
+  position:relative;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body {
+  font-family: Lato;
+  background-color: #aaa;
+}
+#wrapper {
+  width:100%;
+  background-color:#abb;
+}
+main {
+  /*width:80%;
+  width:calc(100vw - 7em);
+  width: -webkit-calc(100vw - 7em);
+  width: -moz-calc(100vw - 7em);*/
+  float:right;
+}
+#frame {
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 100%;
+  height: 100vh;
+}
+nav {
+  float: right;
+  padding:0;
+  box-sizing:border-box;
+  background-color:#abb;
+  height:100%;
+}
+ul {
+  list-style:none;
+  padding-left:0;
+  margin:0;
+}
+.nav-item {
+  font-size: .8em;
+  padding: .3em 20px .3em 0;
+  text-align: right;
+  font-weight: 600;
+  line-height: 7vh;
+  border-bottom: solid 1px #cc0000;
+}
+.nav-item a {
+  padding-left:15px;
+  text-transform: uppercase;
+  color:#fff;
+  text-decoration: none;
+  cursor:pointer;
+}
+.nav-item a:hover {
+  color:#007800;
+}
+.nav-item a:active {
+  color:#005500;
+}
+.nav-item a.nav-current {
+/* this is used as a data attribute */
+}
+.nav-item a.current-color {
+  color:#000088;
+}
+#switch-mode {
+  font: 400 1em Lato;
+  border-radius: 6px;
+  margin-right: -11px;
+  color: white;
+  padding: 4px 8px;
+  background-color: #aaa;
+  letter-spacing: .5px;
+  cursor:pointer;
+}
+#switch-mode:focus {
+  outline:none;
+}
+
