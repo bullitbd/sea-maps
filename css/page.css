@@ -10,16 +10,14 @@ html, body, #wrapper, main {
 body {
   font-family: Lato;
   background-color: #aaa;
+  min-height:300px;
+  overflow:auto;
 }
 #wrapper {
   width:100%;
   background-color:#abb;
 }
 main {
-  /*width:80%;
-  width:calc(100vw - 7em);
-  width: -webkit-calc(100vw - 7em);
-  width: -moz-calc(100vw - 7em);*/
   float:right;
 }
 #frame {
@@ -43,11 +41,18 @@ ul {
 }
 .nav-item {
   font-size: .8em;
-  padding: .3em 20px .3em 0;
+  padding-right:18px;
   text-align: right;
   font-weight: 600;
-  line-height: 7vh;
+  line-height: 8vh;
   border-bottom: solid 1px #cc0000;
+}
+#list-button {
+  font-size: .8em;
+  text-align: center;
+  font-weight: 600;
+  border:none;
+
 }
 .nav-item a {
   padding-left:15px;
@@ -71,7 +76,6 @@ ul {
 #switch-mode {
   font: 400 1em Lato;
   border-radius: 6px;
-  margin-right: -11px;
   color: white;
   padding: 4px 8px;
   background-color: #aaa;

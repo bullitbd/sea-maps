@@ -104,7 +104,7 @@ $(document).ready(function() {
     mapData.forEach(function(map) {
       $('nav ul').append('<li class="nav-item"><a href="" data-map-link="' + map.link + '">' + map.title + '</a></li>');
     });
-    $('nav ul').append('<li class="nav-item"><button id="switch-mode" type="button"></button></li>');
+    $('nav').append('<div id="list-button"><button id="switch-mode" type="button"></button></div>');
   }
 
   function mainSelect(dest) { // select url for iframe
@@ -114,13 +114,19 @@ $(document).ready(function() {
   fillNav();
   mainSelect(mapData[0].link);
   $('.nav-item a').first().addClass('nav-current current-color');
-  $('main').width($('body').width() - 110);
+
+  // $('main').width($('body').width() - 110);
   $('#switch-mode').text('COMPARE');
 
   $(window).resize(function() { // calculate main (right-floated) div width relative to vw - navbar width
     $('main').width($('body').width() - 110);
-    console.log($('body').width(), $('main').width());
+    $('#list-button').height( $('nav').height() - $('nav ul').height() );
+    $('#switch-mode').css('margin-top', ($('#list-button').height() - $('#switch-mode').outerHeight()) / 2 );
+
+    console.log($('body').width(), $('main').width(),$('#list-button').height());
   });
+
+  $(window).trigger('resize');
 
   $('.nav-item a').click(function() { // map list click handler
     var url = $(this).attr('data-map-link');
